@@ -1,1 +1,3 @@
-class ForageAction:Action(){ }
+class ForageAction:Action(){
+
+}

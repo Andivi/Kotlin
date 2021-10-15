@@ -2,8 +2,8 @@ class FoodEnvironment(vararg ags : Actor) : Environment(*ags) {
     val scores: MutableMap<Actor, Int> = mutableMapOf()
 
     init {
-        for (actorInstance in ags) {
-            scores.getValue(actorInstance) = 0
+        for (agent in ags) {
+            scores.put(agent, 0)
         }
 
     }
@@ -11,7 +11,7 @@ class FoodEnvironment(vararg ags : Actor) : Environment(*ags) {
     override fun sense(agent: Actor) {}
     override fun processAction(agent: Actor, act: Action) {
         when (act) {
-                 is ForageAction -> scores.put()
+                 is ForageAction -> scores[agent] = scores.getValue(agent).plus(1)
 
         }
 

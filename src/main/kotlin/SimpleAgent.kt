@@ -3,7 +3,11 @@ class SimpleAgent(override val name: String): Actor {
     override fun act(): Action { return ForageAction()}
 
     override fun toString(): String {
-        return super.toString()
+
+        return "SimpleAgent( name = '$name' ) "
+
+
     }
+
 
 }

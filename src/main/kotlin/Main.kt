@@ -1,6 +1,12 @@
+import kotlin.random.Random
+
 fun main() {
-    val env = FoodEnvironment(RandomAgent("Charlie",0.8), RandomAgent("Bob", 0.2), RandomAgent("Alice", 0.6))
-    for (i in 1..100)
+    val env = FoodEnvironment()
+
+    for (i in 1..10) {
         env.step()
-    println(env.scores)
+        println(env.animal)
+
+
+    }
 }
